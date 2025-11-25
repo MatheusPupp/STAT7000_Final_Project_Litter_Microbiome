@@ -1,0 +1,73 @@
+## Alpha-diversity normality test
+-------------------------------
+Shapiro-Wilk Test for: Observed 
+-------------------------------
+# A tibble: 3 × 3
+  Group       W p.value
+  <chr>   <dbl>   <dbl>
+1 Control 0.976   0.943
+2 Acetic  0.954   0.753
+3 Citric  0.887   0.219
+
+-------------------------------
+Shapiro-Wilk Test for: Shannon 
+-------------------------------
+# A tibble: 3 × 3
+  Group       W p.value
+  <chr>   <dbl>   <dbl>
+1 Control 0.962   0.827
+2 Acetic  0.937   0.586
+3 Citric  0.976   0.939
+
+-------------------------------
+Shapiro-Wilk Test for: Pielou 
+-------------------------------
+# A tibble: 3 × 3
+  Group       W p.value
+  <chr>   <dbl>   <dbl>
+1 Control 0.963   0.837
+2 Acetic  0.872   0.157
+3 Citric  0.965   0.856
+
+## Alpha-diversity stats tests
+
+	Kruskal-Wallis rank sum test
+
+data:  Observed by Group
+Kruskal-Wallis chi-squared = 7.6379, df = 2, p-value = 0.02195
+	
+Kruskal-Wallis rank sum test for Observed
+data:  Observed by Group
+Kruskal-Wallis chi-squared = 7.6379, df = 2, p-value = 0.02195
+
+Kruskal-Wallis rank sum test for Shannon
+data:  Shannon by Group
+Kruskal-Wallis chi-squared = 7.215, df = 2, p-value = 0.02712
+
+Kruskal-Wallis rank sum test for Pielou
+data:  Pielou by Group
+Kruskal-Wallis chi-squared = 3.02, df = 2, p-value = 0.2209
+
+Pairwise comparison Shannon ~ Group with Kruskal-Wallis with Bonferroni adjustment
+Dunn (1964) Kruskal-Wallis multiple comparison
+  p-values adjusted with the Bonferroni method.
+        Comparison          Z    P.unadj     P.adj
+1  Acetic - Citric -2.0152543 0.04387801 0.1316340
+2 Acetic - Control  0.5303301 0.59588309 1.0000000
+3 Citric - Control  2.5455844 0.01090950 0.0327285
+
+Pairwise comparison Observed ~ Group with Kruskal-Wallis with Bonferroni adjustment
+Dunn (1964) Kruskal-Wallis multiple comparison
+  p-values adjusted with the Bonferroni method.
+        Comparison          Z     P.unadj      P.adj
+1  Acetic - Citric -2.0351453 0.041836254 0.12550876
+2 Acetic - Control  0.6016951 0.547377088 1.00000000
+3 Citric - Control  2.6368405 0.008368218 0.02510465
+
+Pairwise comparison Pielou ~ Group with Kruskal-Wallis with Bonferroni adjustment
+Dunn (1964) Kruskal-Wallis multiple comparison
+  p-values adjusted with the Bonferroni method.
+        Comparison          Z   P.unadj     P.adj
+1  Acetic - Citric -1.3435029 0.1791092 0.5373276
+2 Acetic - Control  0.2828427 0.7772974 1.0000000
+3 Citric - Control  1.6263456 0.1038762 0.3116285
